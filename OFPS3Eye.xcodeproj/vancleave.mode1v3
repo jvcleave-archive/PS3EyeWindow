@@ -273,7 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>23</integer>
+									<integer>22</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -328,7 +328,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>343CE02F142148BB00A9E6BB</string>
+										<string>343CE05014214A5900A9E6BB</string>
 										<key>history</key>
 										<array>
 											<string>3488302914211D5300602CDF</string>
@@ -338,12 +338,12 @@
 											<string>3488314314213C0300602CDF</string>
 											<string>343CDFE2142143BE00A9E6BB</string>
 											<string>343CDFF81421452500A9E6BB</string>
-											<string>343CDFF91421452500A9E6BB</string>
 											<string>343CE011142147BB00A9E6BB</string>
-											<string>343CE01C1421485C00A9E6BB</string>
 											<string>343CE01D1421485C00A9E6BB</string>
 											<string>343CE0251421488100A9E6BB</string>
-											<string>343CE0261421488100A9E6BB</string>
+											<string>343CE04E14214A5900A9E6BB</string>
+											<string>343CE04F14214A5900A9E6BB</string>
+											<string>343CE04414214A0900A9E6BB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -541,12 +541,13 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>343CE05114214A5900A9E6BB</string>
 		<string>343CDFF0142143BE00A9E6BB</string>
 		<string>343CDFF1142143BE00A9E6BB</string>
 		<string>34882E621420FD6100602CDF</string>
+		<string>/Volumes/EXTERNAL_JVC/EXPERIMENTAL/OPENFRAMEWORKS/007/openFrameworks/apps/GitHubSandbox/PS3EyeWindow/OFPS3Eye.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>/Volumes/EXTERNAL_JVC/EXPERIMENTAL/OPENFRAMEWORKS/007/openFrameworks/apps/GitHubSandbox/PS3EyeWindow/OFPS3Eye.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 88 1680 940 0 0 1680 1028 </string>

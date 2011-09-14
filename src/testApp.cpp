@@ -24,6 +24,6 @@ void testApp::draw() {
 	cameraImage.draw(0, 0);
 	
 	ofSetColor(255);
-	ofDrawBitmapString(ofToString((int) timer.getFrameRate()), 10, 20);
+	ofDrawBitmapString(ofToString((int) timer.getFrameRate()), 0, wrapper.cameraHeight+20);
 }
 
