@@ -1928,33 +1928,7 @@ void BufferProviderRelease(void * info, const void * data, size_t size)
     return (err) ? NO : YES;
 }
 
-/*
-- (void) decodeBufferQuicktimeImageSaved: (GenericChunkBuffer *) buffer
-{
-    OSErr err;
-    CGrafPtr oldPort;
-    GDHandle oldGDev;
-    
-    (**QuicktimeDecoding.imageDescription).dataSize = buffer->numBytes - decodingSkipBytes;
-    
-    GetGWorld(&oldPort,&oldGDev);
-    SetGWorld(QuicktimeDecoding.gworldPtr, NULL);
-    
-    err = DecompressImage(buffer->buffer + decodingSkipBytes, QuicktimeDecoding.imageDescription,
-                    GetGWorldPixMap(QuicktimeDecoding.gworldPtr), 
-                    &QuicktimeDecoding.boundsRect, 
-                    &QuicktimeDecoding.boundsRect, 
-                    srcCopy, NULL);
-    
-    SetGWorld(oldPort,oldGDev);
-    
-    [LUT processImageRep:QuicktimeDecoding.imageRep 
-                  buffer:nextImageBuffer 
-                 numRows:[self height] 
-                rowBytes:nextImageBufferRowBytes 
-                     bpp:nextImageBufferBPP];
-}
-*/
+
 
 - (BOOL) decodeBufferQuicktimeSequence: (GenericChunkBuffer *) buffer
 {
@@ -1972,13 +1946,6 @@ void BufferProviderRelease(void * info, const void * data, size_t size)
                   fromBPP:(* GetGWorldPixMap(QuicktimeDecoding.gworldPtr))->pixelSize/8
                alphaFirst:NO];
     
-    /*
-    [LUT processImageRep:QuicktimeDecoding.imageRep 
-                  buffer:nextImageBuffer 
-                 numRows:[self height] 
-                rowBytes:nextImageBufferRowBytes 
-                     bpp:nextImageBufferBPP];
-    */
 #if REALLY_VERBOSE
     if (err) 
         printf("QuickTime Sequence decoding error!\n");
@@ -2096,7 +2063,7 @@ void BufferProviderRelease(void * info, const void * data, size_t size)
 #if VERBOSE
         [[central delegate] updateStatus:NULL fpsDisplay:[displayFPS getCumulativeFPS] fpsReceived:[receiveFPS getFPS]];
 #else
-        [[central delegate] updateStatus:NULL fpsDisplay:[displayFPS getCumulativeFPS] fpsReceived:0.0];
+        //[[central delegate] updateStatus:NULL fpsDisplay:[displayFPS getCumulativeFPS] fpsReceived:0.0];
 #endif
     }
     

@@ -7,7 +7,7 @@
 		argumentStrings = (
 		);
 		autoAttachOnCrash = 1;
-		breakpointsEnabled = 1;
+		breakpointsEnabled = 0;
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
@@ -68,7 +68,7 @@
 		fRef = 3418AA7D141FFB82002D5B0F /* OV534Driver.m */;
 		name = "OV534Driver.m: 1167";
 		rLen = 0;
-		rLoc = 38090;
+		rLoc = 38100;
 		rType = 0;
 		vrLen = 4100;
 		vrLoc = 31725;
@@ -87,7 +87,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
 		rLen = 1;
-		rLoc = 603;
+		rLoc = 605;
 		rType = 1;
 	};
 	03E5AB6B142046DF003A7F95 /* PBXTextBookmark */ = {
@@ -95,7 +95,7 @@
 		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
 		name = "MyCameraDriver.m: 599";
 		rLen = 0;
-		rLoc = 11903;
+		rLoc = 11943;
 		rType = 0;
 		vrLen = 2608;
 		vrLoc = 10496;
@@ -105,7 +105,7 @@
 		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
 		name = "MyCameraDriver.m: 599";
 		rLen = 39;
-		rLoc = 11864;
+		rLoc = 11904;
 		rType = 0;
 		vrLen = 2650;
 		vrLoc = 10496;
@@ -182,7 +182,7 @@
 		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
 		name = "MyCameraDriver.m: 768";
 		rLen = 53;
-		rLoc = 16132;
+		rLoc = 16172;
 		rType = 0;
 		vrLen = 1590;
 		vrLoc = 14717;
@@ -278,7 +278,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
 		name = "PS3EyeWindowAppDelegate.m: 170";
 		rLen = 0;
-		rLoc = 8387;
+		rLoc = 8608;
 		rType = 0;
 		vrLen = 4333;
 		vrLoc = 3219;
@@ -314,7 +314,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
 		name = "PS3EyeWindowAppDelegate.m: 170";
 		rLen = 0;
-		rLoc = 8387;
+		rLoc = 8608;
 		rType = 0;
 		vrLen = 4359;
 		vrLoc = 3192;
@@ -324,7 +324,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
 		name = "PS3EyeWindowAppDelegate.m: 170";
 		rLen = 0;
-		rLoc = 8285;
+		rLoc = 8506;
 		rType = 0;
 		vrLen = 4293;
 		vrLoc = 3345;
@@ -413,7 +413,7 @@
 		isa = PBXTextBookmark;
 		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
 		rLen = 1;
-		rLoc = 676;
+		rLoc = 678;
 		rType = 1;
 	};
 	03E5ABD514205164003A7F95 /* PBXTextBookmark */ = {
@@ -421,7 +421,7 @@
 		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
 		name = "MyCameraDriver.m: 683";
 		rLen = 0;
-		rLoc = 14683;
+		rLoc = 14723;
 		rType = 0;
 		vrLen = 1749;
 		vrLoc = 14034;
@@ -442,7 +442,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 200;
+		rLoc = 211;
 		rType = 1;
 	};
 	03E5ABDB1420529E003A7F95 /* PBXTextBookmark */ = {
@@ -450,7 +450,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
 		name = "PS3EyeWindowAppDelegate.m: 183";
 		rLen = 0;
-		rLoc = 8411;
+		rLoc = 8632;
 		rType = 0;
 		vrLen = 1813;
 		vrLoc = 5914;
@@ -470,7 +470,7 @@
 		fRef = 256AC3D80F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.h */;
 		name = "PS3EyeWindowAppDelegate.h: 28";
 		rLen = 0;
-		rLoc = 594;
+		rLoc = 622;
 		rType = 0;
 		vrLen = 849;
 		vrLoc = 0;
@@ -480,7 +480,7 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
 		name = "PS3EyeWindowAppDelegate.m: 170";
 		rLen = 0;
-		rLoc = 8161;
+		rLoc = 8382;
 		rType = 0;
 		vrLen = 4370;
 		vrLoc = 3352;
@@ -490,23 +490,250 @@
 		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
 		name = "PS3EyeWindowAppDelegate.m: 185";
 		rLen = 0;
-		rLoc = 8113;
+		rLoc = 8334;
 		rType = 0;
 		vrLen = 4046;
 		vrLoc = 4370;
 	};
+	03E5ABEB142057B3003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.h */;
+		name = "PS3EyeWindowAppDelegate.h: 30";
+		rLen = 0;
+		rLoc = 662;
+		rType = 0;
+		vrLen = 853;
+		vrLoc = 0;
+	};
+	03E5ABEC142057B3003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 185";
+		rLen = 0;
+		rLoc = 8334;
+		rType = 0;
+		vrLen = 4118;
+		vrLoc = 4298;
+	};
+	03E5ABED142057B3003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 96";
+		rLen = 0;
+		rLoc = 3535;
+		rType = 0;
+		vrLen = 4608;
+		vrLoc = 2239;
+	};
+	03E5ABF11420588A003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 71";
+		rLen = 15;
+		rLoc = 2416;
+		rType = 0;
+		vrLen = 4704;
+		vrLoc = 2068;
+	};
+	03E5ABF21420588A003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA59141FFA49002D5B0F /* MyCameraCentral.m */;
+		name = "MyCameraCentral.m: 491";
+		rLen = 14;
+		rLoc = 15935;
+		rType = 0;
+		vrLen = 1986;
+		vrLoc = 15075;
+	};
+	03E5ABF31420588A003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
+		rLen = 1;
+		rLoc = 27;
+		rType = 1;
+	};
+	03E5ABF41420588A003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
+		name = "MyCameraDriver.m: 174";
+		rLen = 0;
+		rLoc = 4694;
+		rType = 0;
+		vrLen = 2021;
+		vrLoc = 3535;
+	};
+	03E5ABFA142059B1003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
+		name = "MyCameraDriver.m: 28";
+		rLen = 31;
+		rLoc = 1068;
+		rType = 0;
+		vrLen = 2575;
+		vrLoc = 57;
+	};
+	03E5ABFB142059B1003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA59141FFA49002D5B0F /* MyCameraCentral.m */;
+		name = "MyCameraCentral.m: 487";
+		rLen = 110;
+		rLoc = 15779;
+		rType = 0;
+		vrLen = 2053;
+		vrLoc = 14764;
+	};
+	03E5ABFC142059B1003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 188";
+		rLen = 0;
+		rLoc = 8123;
+		rType = 0;
+		vrLen = 4222;
+		vrLoc = 4044;
+	};
+	03E5ABFD142059B1003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 96";
+		rLen = 0;
+		rLoc = 3535;
+		rType = 0;
+		vrLen = 4948;
+		vrLoc = 2464;
+	};
+	03E5AC0314205AE9003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA62141FFB03002D5B0F /* MyCameraDriver.m */;
+		name = "MyCameraDriver.m: 836";
+		rLen = 8;
+		rLoc = 17607;
+		rType = 0;
+		vrLen = 2526;
+		vrLoc = 16410;
+	};
+	03E5AC0414205AE9003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 173";
+		rLen = 0;
+		rLoc = 7588;
+		rType = 0;
+		vrLen = 3953;
+		vrLoc = 4680;
+	};
+	03E5AC0514205AE9003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.h */;
+		name = "PS3EyeWindowAppDelegate.h: 20";
+		rLen = 14;
+		rLoc = 426;
+		rType = 0;
+		vrLen = 853;
+		vrLoc = 0;
+	};
+	03E5AC0614205AE9003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.h */;
+		name = "PS3EyeWindowAppDelegate.h: 29";
+		rLen = 0;
+		rLoc = 622;
+		rType = 0;
+		vrLen = 881;
+		vrLoc = 0;
+	};
+	03E5AC0A14205CAA003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D80F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.h */;
+		name = "PS3EyeWindowAppDelegate.h: 29";
+		rLen = 0;
+		rLoc = 622;
+		rType = 0;
+		vrLen = 881;
+		vrLoc = 0;
+	};
+	03E5AC0B14205CAA003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 173";
+		rLen = 0;
+		rLoc = 7588;
+		rType = 0;
+		vrLen = 4222;
+		vrLoc = 4188;
+	};
+	03E5AC0C14205CAA003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA7D141FFB82002D5B0F /* OV534Driver.m */;
+		name = "OV534Driver.m: 1167";
+		rLen = 0;
+		rLoc = 38100;
+		rType = 0;
+		vrLen = 4016;
+		vrLoc = 31809;
+	};
+	03E5AC0D14205CAA003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA7D141FFB82002D5B0F /* OV534Driver.m */;
+		name = "OV534Driver.m: 397";
+		rLen = 0;
+		rLoc = 16771;
+		rType = 0;
+		vrLen = 3479;
+		vrLoc = 15624;
+	};
+	03E5AC1114205D5E003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 3418AA7D141FFB82002D5B0F /* OV534Driver.m */;
+		name = "OV534Driver.m: 397";
+		rLen = 0;
+		rLoc = 16771;
+		rType = 0;
+		vrLen = 3484;
+		vrLoc = 15624;
+	};
+	03E5AC1214205D5E003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 173";
+		rLen = 0;
+		rLoc = 7588;
+		rType = 0;
+		vrLen = 4284;
+		vrLoc = 4126;
+	};
+	03E5AC1314205D5E003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 172";
+		rLen = 0;
+		rLoc = 7566;
+		rType = 0;
+		vrLen = 3467;
+		vrLoc = 5175;
+	};
+	03E5AC1914205D94003A7F95 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */;
+		name = "PS3EyeWindowAppDelegate.m: 41";
+		rLen = 0;
+		rLoc = 1593;
+		rType = 0;
+		vrLen = 3472;
+		vrLoc = 53;
+	};
 	256AC3D80F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1867, 1205}}";
-			sepNavSelRange = "{594, 0}";
-			sepNavVisRange = "{0, 849}";
+			sepNavIntBoundsRect = "{{0, 0}, {1777, 1205}}";
+			sepNavSelRange = "{622, 0}";
+			sepNavVisRange = "{0, 881}";
 		};
 	};
 	256AC3D90F4B6AC300CF3369 /* PS3EyeWindowAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1867, 2626}}";
-			sepNavSelRange = "{8113, 0}";
-			sepNavVisRange = "{4370, 4046}";
+			sepNavIntBoundsRect = "{{0, 0}, {1777, 2769}}";
+			sepNavSelRange = "{7578, 7}";
+			sepNavVisRange = "{4958, 3674}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -528,7 +755,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					1689,
+					1599,
 					20,
 					48.16259765625,
 					43,
@@ -595,6 +822,29 @@
 			03E5ABE1142052F3003A7F95 /* PBXTextBookmark */ = 03E5ABE1142052F3003A7F95 /* PBXTextBookmark */;
 			03E5ABE2142052F3003A7F95 /* PBXTextBookmark */ = 03E5ABE2142052F3003A7F95 /* PBXTextBookmark */;
 			03E5ABE3142052F3003A7F95 /* PBXTextBookmark */ = 03E5ABE3142052F3003A7F95 /* PBXTextBookmark */;
+			03E5ABEB142057B3003A7F95 /* PBXTextBookmark */ = 03E5ABEB142057B3003A7F95 /* PBXTextBookmark */;
+			03E5ABEC142057B3003A7F95 /* PBXTextBookmark */ = 03E5ABEC142057B3003A7F95 /* PBXTextBookmark */;
+			03E5ABED142057B3003A7F95 /* PBXTextBookmark */ = 03E5ABED142057B3003A7F95 /* PBXTextBookmark */;
+			03E5ABF11420588A003A7F95 /* PBXTextBookmark */ = 03E5ABF11420588A003A7F95 /* PBXTextBookmark */;
+			03E5ABF21420588A003A7F95 /* PBXTextBookmark */ = 03E5ABF21420588A003A7F95 /* PBXTextBookmark */;
+			03E5ABF31420588A003A7F95 /* PBXTextBookmark */ = 03E5ABF31420588A003A7F95 /* PBXTextBookmark */;
+			03E5ABF41420588A003A7F95 /* PBXTextBookmark */ = 03E5ABF41420588A003A7F95 /* PBXTextBookmark */;
+			03E5ABFA142059B1003A7F95 /* PBXTextBookmark */ = 03E5ABFA142059B1003A7F95 /* PBXTextBookmark */;
+			03E5ABFB142059B1003A7F95 /* PBXTextBookmark */ = 03E5ABFB142059B1003A7F95 /* PBXTextBookmark */;
+			03E5ABFC142059B1003A7F95 /* PBXTextBookmark */ = 03E5ABFC142059B1003A7F95 /* PBXTextBookmark */;
+			03E5ABFD142059B1003A7F95 /* PBXTextBookmark */ = 03E5ABFD142059B1003A7F95 /* PBXTextBookmark */;
+			03E5AC0314205AE9003A7F95 /* PBXTextBookmark */ = 03E5AC0314205AE9003A7F95 /* PBXTextBookmark */;
+			03E5AC0414205AE9003A7F95 /* PBXTextBookmark */ = 03E5AC0414205AE9003A7F95 /* PBXTextBookmark */;
+			03E5AC0514205AE9003A7F95 /* PBXTextBookmark */ = 03E5AC0514205AE9003A7F95 /* PBXTextBookmark */;
+			03E5AC0614205AE9003A7F95 /* PBXTextBookmark */ = 03E5AC0614205AE9003A7F95 /* PBXTextBookmark */;
+			03E5AC0A14205CAA003A7F95 /* PBXTextBookmark */ = 03E5AC0A14205CAA003A7F95 /* PBXTextBookmark */;
+			03E5AC0B14205CAA003A7F95 /* PBXTextBookmark */ = 03E5AC0B14205CAA003A7F95 /* PBXTextBookmark */;
+			03E5AC0C14205CAA003A7F95 /* PBXTextBookmark */ = 03E5AC0C14205CAA003A7F95 /* PBXTextBookmark */;
+			03E5AC0D14205CAA003A7F95 /* PBXTextBookmark */ = 03E5AC0D14205CAA003A7F95 /* PBXTextBookmark */;
+			03E5AC1114205D5E003A7F95 /* PBXTextBookmark */ = 03E5AC1114205D5E003A7F95 /* PBXTextBookmark */;
+			03E5AC1214205D5E003A7F95 /* PBXTextBookmark */ = 03E5AC1214205D5E003A7F95 /* PBXTextBookmark */;
+			03E5AC1314205D5E003A7F95 /* PBXTextBookmark */ = 03E5AC1314205D5E003A7F95 /* PBXTextBookmark */;
+			03E5AC1914205D94003A7F95 /* PBXTextBookmark */ = 03E5AC1914205D94003A7F95 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 03E5AB1C1420451D003A7F95 /* Source Control */;
 		userBuildSettings = {
@@ -602,9 +852,9 @@
 	};
 	3418AA59141FFA49002D5B0F /* MyCameraCentral.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1874, 14313}}";
-			sepNavSelRange = "{29863, 0}";
-			sepNavVisRange = "{18087, 3944}";
+			sepNavIntBoundsRect = "{{0, 0}, {1777, 15067}}";
+			sepNavSelRange = "{15779, 110}";
+			sepNavVisRange = "{14764, 2053}";
 		};
 	};
 	3418AA60141FFAEB002D5B0F /* GlobalDefs.h */ = {
@@ -623,16 +873,16 @@
 	};
 	3418AA62141FFB03002D5B0F /* MyCameraDriver.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1867, 27079}}";
-			sepNavSelRange = "{4556, 0}";
-			sepNavVisRange = "{7727, 1523}";
+			sepNavIntBoundsRect = "{{0, 0}, {1777, 26000}}";
+			sepNavSelRange = "{17607, 8}";
+			sepNavVisRange = "{16410, 2526}";
 		};
 	};
 	3418AA7D141FFB82002D5B0F /* OV534Driver.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1951, 15197}}";
-			sepNavSelRange = "{38090, 0}";
-			sepNavVisRange = "{31725, 4100}";
+			sepNavIntBoundsRect = "{{0, 0}, {1777, 14963}}";
+			sepNavSelRange = "{16771, 0}";
+			sepNavVisRange = "{15624, 3484}";
 		};
 	};
 	8D1107260486CEB800E47090 /* PS3EyeWindow */ = {

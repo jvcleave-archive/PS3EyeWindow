@@ -394,7 +394,7 @@
             // usually controller register 0xe5 is set to 0x04
             // except when ** (0x0d is set to 0x81) when it is set to 0x02
             //
-            
+            fps = 180;
             if (fps == 5) 
             {
                 // 5 = 180 / 36

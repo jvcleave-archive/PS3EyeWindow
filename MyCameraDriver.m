@@ -169,7 +169,9 @@
     return delegate;
 }
 
-- (void) setDelegate:(id)d {
+- (void) setDelegate:(id)d 
+{
+	NSLog(@"MyCameraDriver setDelegate");
     delegate=d;
 }
 

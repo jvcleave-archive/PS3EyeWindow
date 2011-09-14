@@ -93,7 +93,7 @@
 			{
 				NSLog(@"Status: Connected to %@", [central nameForID:cid]);
 			}
-                
+			[driver setDelegate:self];
             [driver retain];			//We keep our own reference
             /*[contrastSlider setEnabled:[driver canSetContrast]];
             [brightnessSlider setEnabled:[driver canSetBrightness]];
@@ -166,22 +166,33 @@
         }
     }
 }
-
+- (void) imageReady:(id)cam 
+{
+    if (cam!=driver) return;	//probably an old one
+	[imageView display];
+    [driver setImageBuffer:[driver imageBuffer] bpp:[driver imageBufferBPP] rowBytes:[driver imageBufferRowBytes]];
+}
 - (void) updateStatus:(NSString *)status fpsDisplay:(float)fpsDisplay fpsReceived:(float)fpsReceived
 {
     NSString * append;
     NSString * newStatus;
     
     if (fpsReceived == 0.0) 
-        append = [NSString stringWithFormat:LStr(@" (%3.1f fps)"), fpsDisplay];
-    else 
-        append = [NSString stringWithFormat:LStr(@" (%3.1f fps, receiving %3.1f fps)"), fpsDisplay, fpsReceived];
+	{
+	  append = [NSString stringWithFormat:LStr(@" (%3.1f fps)"), fpsDisplay];	
+	}else 
+	{
+		append = [NSString stringWithFormat:LStr(@" (%3.1f fps, receiving %3.1f fps)"), fpsDisplay, fpsReceived];
+	}
     
-    if (status == NULL) 
-        newStatus = [[NSString stringWithString:LStr(@"Status: Playing")] stringByAppendingString:append];
-    else 
-        newStatus = [status stringByAppendingString:append];
-    
+    if (status == NULL)
+	{
+		newStatus = [[NSString stringWithString:LStr(@"Status: Playing")] stringByAppendingString:append];
+	}else 
+	{
+		newStatus = [status stringByAppendingString:append];
+	}
+
 	NSLog(@"updateStatus %@", newStatus);
     //[statusText setStringValue:newStatus];
 }

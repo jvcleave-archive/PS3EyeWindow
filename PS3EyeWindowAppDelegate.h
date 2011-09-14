@@ -26,8 +26,9 @@
 - (void)cameraDetected:(unsigned long)uid;
 
 //delegate calls from camera driver
-- (void)cameraHasShutDown:(id)cam;
-- (void) cameraEventHappened:(id)sender event:(CameraEvent)evt;
+- (void)imageReady:(id)cam;
+//- (void)cameraHasShutDown:(id)cam;
+//- (void) cameraEventHappened:(id)sender event:(CameraEvent)evt;
 - (void) updateStatus:(NSString *)status fpsDisplay:(float)fpsDisplay fpsReceived:(float)fpsReceived;
 
 @property (assign) IBOutlet NSWindow *window;
