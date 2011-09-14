@@ -289,7 +289,7 @@
 		
 		if (resolution == ResolutionVGA) 
 		{
-			NSLog(@"ResolutionVGA");
+			NSLog( @"OV534Driver:setResolution ResolutionVGA fps:%d", fps);
 			if (fps == 5) 
             {
                 // 5 = 60 / 12
@@ -364,7 +364,7 @@
         else if (resolution == ResolutionSIF) 
         {
 			
-			NSLog(@"ResolutionSIF");
+			NSLog( @"OV534Driver:setResolution ResolutionSIF fps:%d", fps);
 			//these were found by sniffing the windows ps3 eye app
 			//maccam reports the fps is either higher or lower than 
 			//what we are asking for - 
@@ -394,7 +394,7 @@
             // usually controller register 0xe5 is set to 0x04
             // except when ** (0x0d is set to 0x81) when it is set to 0x02
             //
-            fps = 180;
+            
             if (fps == 5) 
             {
                 // 5 = 180 / 36

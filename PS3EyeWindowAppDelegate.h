@@ -21,6 +21,10 @@
 	
 	
 	BOOL cameraGrabbing;
+	CameraResolution cameraResolution;
+	int cameraWidth;
+	int cameraHeight;
+	int cameraFPS;
 }
 //delegate calls from camera central
 - (void)cameraDetected:(unsigned long)uid;

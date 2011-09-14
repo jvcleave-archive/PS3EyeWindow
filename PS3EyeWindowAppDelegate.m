@@ -14,12 +14,26 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
 {
+	cameraResolution = ResolutionSIF;
+	//ResolutionSIF or ResolutionVGA
+	
+	if (cameraResolution == ResolutionVGA) 
+	{
+		cameraWidth = 640;
+		cameraHeight = 480;
+		cameraFPS = 60;
+	}else {
+		cameraWidth = 320;
+		cameraHeight = 240;
+		cameraFPS = 180;
+	}
+
 	// Insert code here to initialize your application 
 	image=[[NSImage alloc] init];
     [image setCacheDepthMatchesImageDepth:YES];			//We have to set this to work with thousands of colors
     imageRep=[[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL	//Set up just to avoid a NIL imageRep
-                                                     pixelsWide:320
-                                                     pixelsHigh:240
+                                                     pixelsWide:cameraWidth
+                                                     pixelsHigh:cameraHeight
                                                   bitsPerSample:8	
                                                 samplesPerPixel:3
                                                        hasAlpha:NO
@@ -32,13 +46,13 @@
     [image addRepresentation:imageRep]; 
 	
 
-	imageView = [[[NSImageView alloc] initWithFrame:NSMakeRect(0, 240, 320, 240)] autorelease];
+	imageView = [[[NSImageView alloc] initWithFrame:NSMakeRect(0, cameraHeight, cameraWidth, cameraHeight)] autorelease];
 	imageView.image = image;
 	
 	[window setContentView:imageView];
 	
 	[window makeKeyAndOrderFront:self];
-	[window display];
+	[window setFrame:NSMakeRect(0, 768, 1024, 768) display:YES];
 	
 	central = [MyCameraCentral sharedCameraCentral];
 	[central setDelegate:self];
@@ -95,6 +109,9 @@
 			}
 			[driver setDelegate:self];
             [driver retain];			//We keep our own reference
+			NSLog(@"PS3EyeWindowAppDelegate: setting cameraWidth: %d cameraHeight: %d cameraFPS: %d", cameraWidth, cameraHeight, cameraFPS);
+			[driver setResolution:cameraResolution fps:cameraFPS];
+			
             /*[contrastSlider setEnabled:[driver canSetContrast]];
             [brightnessSlider setEnabled:[driver canSetBrightness]];
             [gammaSlider setEnabled:[driver canSetGamma]];

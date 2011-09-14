@@ -153,7 +153,7 @@
         [NSThread detachNewThreadSelector:@selector(buttonThread:) toTarget:self withObject:threadData];
     }
     
-#if REALLY_VERBOSE
+//#if REALLY_VERBOSE
     NSLog(@"GenericDriver init, info = \n");
     NSLog(@" cid = %i\n", [cameraInfo cid]);
     NSLog(@" VID = 0x%04X\n", [cameraInfo vendorID]);
@@ -163,7 +163,7 @@
     NSLog(@" name = %@\n", [cameraInfo cameraName]);
     NSLog(@" driver = %i\n", [cameraInfo driver]);
     NSLog(@" driver class name = %@\n", NSStringFromClass([cameraInfo driverClass]));
-#endif
+//#endif
     
     [self startupCamera];
     
@@ -2060,11 +2060,7 @@ void BufferProviderRelease(void * info, const void * data, size_t size)
     
     if ([displayFPS update]) 
     {
-#if VERBOSE
-        [[central delegate] updateStatus:NULL fpsDisplay:[displayFPS getCumulativeFPS] fpsReceived:[receiveFPS getFPS]];
-#else
-        //[[central delegate] updateStatus:NULL fpsDisplay:[displayFPS getCumulativeFPS] fpsReceived:0.0];
-#endif
+		[[central delegate] updateStatus:NULL fpsDisplay:[displayFPS getCumulativeFPS] fpsReceived:[receiveFPS getFPS]];
     }
     
     return ok;

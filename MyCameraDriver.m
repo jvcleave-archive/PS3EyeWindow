@@ -130,6 +130,8 @@
     r=[self defaultResolutionAndRate:&fr];
     wb=[self defaultWhiteBalanceMode];
     [self setResolution:r fps:fr];
+	//NSLog(@"JVC HIJACKING STARTUP PARAMS AT startupWithUsbLocationId");
+	//[self setResolution:ResolutionVGA fps:60];
     [self setWhiteBalanceMode:wb];
     isStarted=YES;
     return CameraErrorOK;

@@ -312,7 +312,7 @@ MyCameraCentral* sharedCameraCentral=NULL;
     // Add Driver classes (this is where we have to add new model classes!)
     
    
-    [self registerCameraDriver:[OV534Driver class]];
+   //[self registerCameraDriver:[OV534Driver class]];
     [self registerCameraDriver:[OV538Driver class]];
     
   
@@ -538,7 +538,7 @@ MyCameraCentral* sharedCameraCentral=NULL;
     if (cam!=NULL) 
 	{
         [dev setDriver:cam];
-        [self setCameraToDefaults:cam];
+        //[self setCameraToDefaults:cam];
         if (outCam)
 		{
 			 *outCam=cam;
@@ -647,7 +647,9 @@ MyCameraCentral* sharedCameraCentral=NULL;
         camDict=[self prefsForKey:NSStringFromClass([[cameras objectAtIndex:idx] driverClass])];
         if (!camDict) ok=NO;		//There are no defaults for the camera listed
     }
-    if (ok) {
+    if (ok) 
+	{
+		NSLog(@"MyCameraCentral about to set defaults");
         if ([camDict objectForKey:@"brightness"])
             [cam setBrightness:[[camDict objectForKey:@"brightness"] floatValue]];
         if ([camDict objectForKey:@"contrast"])
@@ -673,7 +675,13 @@ MyCameraCentral* sharedCameraCentral=NULL;
         if ([camDict objectForKey:@"compression"])
             [cam setCompression:[[camDict objectForKey:@"compression"] shortValue]];
         if ([camDict objectForKey:@"resolution"]&&[camDict objectForKey:@"fps"])
-            [cam setResolution:[[camDict objectForKey:@"resolution"] shortValue] fps:[[camDict objectForKey:@"fps"] shortValue]];
+		{
+			NSLog(@"MyCameraCentral about to set resolution:  %@ and fps: %@", [camDict objectForKey:@"resolution"], [camDict objectForKey:@"fps"] );
+			//[cam setResolution:[[camDict objectForKey:@"resolution"] shortValue] fps:[[camDict objectForKey:@"fps"] shortValue]];
+			//[cam setResolution:ResolutionVGA fps:60];
+			//[cam setResolution:ResolutionSIF fps:180];
+		}
+            
        	if ([camDict objectForKey:@"white balance"])
             [cam setWhiteBalanceMode:(WhiteBalanceMode)[[camDict objectForKey:@"white balance"] shortValue]];
        	if ([camDict objectForKey:@"flicker control"])
@@ -682,6 +690,7 @@ MyCameraCentral* sharedCameraCentral=NULL;
             [cam setUSBReducedBandwidth:[[camDict objectForKey:@"bandwidth reduction"] boolValue]];
     }
     [pool release];
+	ok = NO;
     return ok;
 }
 
