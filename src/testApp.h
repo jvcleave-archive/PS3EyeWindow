@@ -43,8 +43,7 @@ public:
 	void update();
 	void draw();
 	PS3EyeWrapper wrapper;
-	void doSomething();
 	RateTimer timer;
 };
 
-extern testApp* app;
+//extern testApp* app;

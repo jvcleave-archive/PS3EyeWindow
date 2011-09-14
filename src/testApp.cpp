@@ -26,7 +26,3 @@ void testApp::draw() {
 	ofDrawBitmapString(ofToString((int) timer.getFrameRate()), 10, 20);
 }
 
-void testApp::doSomething()
-{
-	cout << "doSomething called" << endl;
-}

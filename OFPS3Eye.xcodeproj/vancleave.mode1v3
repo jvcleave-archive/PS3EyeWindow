@@ -273,8 +273,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>14</integer>
-									<integer>2</integer>
+									<integer>23</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -317,7 +316,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MyCameraDriver.m</string>
+								<string>testApp.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -325,11 +324,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MyCameraDriver.m</string>
+										<string>testApp.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>343CDFE4142143BE00A9E6BB</string>
+										<string>343CDFFC1421452500A9E6BB</string>
 										<key>history</key>
 										<array>
 											<string>3488302914211D5300602CDF</string>
@@ -337,12 +336,13 @@
 											<string>348830BE1421320F00602CDF</string>
 											<string>3488312914213B0E00602CDF</string>
 											<string>3488314314213C0300602CDF</string>
-											<string>343CDFDE142143BE00A9E6BB</string>
 											<string>343CDFDF142143BE00A9E6BB</string>
-											<string>343CDFE0142143BE00A9E6BB</string>
 											<string>343CDFE1142143BE00A9E6BB</string>
 											<string>343CDFE2142143BE00A9E6BB</string>
-											<string>343CDFE3142143BE00A9E6BB</string>
+											<string>343CDFF81421452500A9E6BB</string>
+											<string>343CDFF91421452500A9E6BB</string>
+											<string>343CDFFA1421452500A9E6BB</string>
+											<string>343CDFFB1421452500A9E6BB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -540,13 +540,12 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>343CDFEF142143BE00A9E6BB</string>
 		<string>343CDFF0142143BE00A9E6BB</string>
 		<string>343CDFF1142143BE00A9E6BB</string>
-		<string>34882E621420FD6100602CDF</string>
-		<string>/Volumes/EXTERNAL_JVC/EXPERIMENTAL/OPENFRAMEWORKS/007/openFrameworks/apps/GitHubSandbox/PS3EyeWindow/OFPS3Eye.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
+		<string>/Volumes/EXTERNAL_JVC/EXPERIMENTAL/OPENFRAMEWORKS/007/openFrameworks/apps/GitHubSandbox/PS3EyeWindow/OFPS3Eye.xcodeproj</string>
+		<string>34882E621420FD6100602CDF</string>
 	</array>
 	<key>WindowString</key>
 	<string>0 88 1680 940 0 0 1680 1028 </string>
@@ -587,6 +586,8 @@
 							<string>232pt</string>
 						</dict>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -639,7 +640,7 @@
 			<key>WindowToolGUID</key>
 			<string>34882E621420FD6100602CDF</string>
 			<key>WindowToolIsVisible</key>
-			<false/>
+			<true/>
 		</dict>
 		<dict>
 			<key>FirstTimeWindowDisplayed</key>
