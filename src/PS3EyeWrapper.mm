@@ -4,7 +4,6 @@
 #include <Cocoa/Cocoa.h>
 #import "MyCameraCentral.h"
 
-//#import "PS3EyeWindowAppDelegate.h"
 
 MyCameraCentral* central;
 MyCameraDriver* driver;
@@ -19,23 +18,26 @@ NSBitmapImageRep* imageRep;
 
 PS3EyeWrapper::PS3EyeWrapper()
 {
-	cameraResolution = ResolutionSIF;
-	//ResolutionSIF or ResolutionVGA
 	frameNew = false;
-	if (cameraResolution == ResolutionVGA) 
+	
+}
+void PS3EyeWrapper::setup(int cameraRes, int framesPerSecond)
+{
+	if (cameraRes == PS3_VGA) 
 	{
+		cameraResolution = ResolutionVGA;
 		cameraWidth = 640;
 		cameraHeight = 480;
-		cameraFPS = 60;
-	}else 
-	{
+	}else {
+		cameraResolution = ResolutionSIF;
 		cameraWidth = 320;
 		cameraHeight = 240;
-		cameraFPS = 180;
 	}
-	pixels = new unsigned char [cameraWidth*cameraHeight*3];
-}
 
+	cameraFPS = framesPerSecond;
+	pixels = new unsigned char [cameraWidth*cameraHeight*3];
+	init();
+}
 void PS3EyeWrapper::init() {
 
 	central = [MyCameraCentral sharedCameraCentral];

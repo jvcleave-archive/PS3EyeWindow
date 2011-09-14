@@ -4,7 +4,8 @@ ofImage cameraImage;
 void testApp::setup()
 {
 	//ofSetFrameRate(60);
-	wrapper.init();
+	//wrapper.setup(PS3_VGA, 60);
+	wrapper.setup(PS3_SIF, 180);
 }
 
 void testApp::update() {

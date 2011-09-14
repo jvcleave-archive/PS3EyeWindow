@@ -25,7 +25,7 @@ public:
 		if(lastTick == 0) {
 			secondTick = true;
 		} else {
-			float curDiff = curTick - lastTick;;
+			float curDiff = curTick - lastTick;
 			if(secondTick) {
 				averagePeriod = curDiff;
 				secondTick = false;
@@ -45,5 +45,3 @@ public:
 	PS3EyeWrapper wrapper;
 	RateTimer timer;
 };
-
-//extern testApp* app;
