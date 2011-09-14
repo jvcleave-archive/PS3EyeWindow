@@ -68,7 +68,7 @@ PS3EyeWrapper* myWrapper;
 
 - (void) imageReady:(id)cam 
 {
-	NSLog(@"MyCameraCentral:imageReady");
+	//NSLog(@"MyCameraCentral:imageReady");
 	myWrapper->onImageReady([imageRep bitmapData]);
 	[driver setImageBuffer:[driver imageBuffer] bpp:[driver imageBufferBPP] rowBytes:[driver imageBufferRowBytes]];
 }

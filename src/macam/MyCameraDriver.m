@@ -839,13 +839,13 @@
         if ([delegate respondsToSelector:@selector(imageReady:)]) 
 		{
             [delegate imageReady:sender];
-			NSLog(@"delegation success for imageReady");
+			//NSLog(@"delegation success for imageReady");
         }else {
-			NSLog(@"delegation failed for imageReady");
+			//NSLog(@"delegation failed for imageReady");
 		}
 
     }else {
-		NSLog(@"driver has no delegate");
+		//NSLog(@"driver has no delegate");
 	}
 
 }

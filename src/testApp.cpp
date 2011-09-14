@@ -1,13 +1,15 @@
 #include "testApp.h"
 
 ofImage cameraImage;
-void testApp::setup() {
+void testApp::setup()
+{
 	//ofSetFrameRate(60);
-	wrapper.ps3eyeInit();
+	wrapper.init();
 }
 
 void testApp::update() {
-	if(wrapper.ps3eyeIsFrameNew()) {
+	if(wrapper.isFrameNew())
+	{
 		timer.tick();
 	}
 	

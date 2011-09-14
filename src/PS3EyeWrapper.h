@@ -5,12 +5,13 @@ class PS3EyeWrapper
 {
 public:
 	PS3EyeWrapper();
-	void ps3eyeInit();
-	bool ps3eyeIsFrameNew();
+	void init();
+	bool isFrameNew();
 	void onImageReady(unsigned char * cameraPixels);
 	unsigned char * pixels;
 	
 	int cameraWidth;
 	int cameraHeight;
 	int cameraFPS;
+	bool frameNew;
 };

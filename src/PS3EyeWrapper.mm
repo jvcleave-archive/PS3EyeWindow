@@ -21,7 +21,7 @@ PS3EyeWrapper::PS3EyeWrapper()
 {
 	cameraResolution = ResolutionSIF;
 	//ResolutionSIF or ResolutionVGA
-	
+	frameNew = false;
 	if (cameraResolution == ResolutionVGA) 
 	{
 		cameraWidth = 640;
@@ -36,7 +36,7 @@ PS3EyeWrapper::PS3EyeWrapper()
 	pixels = new unsigned char [cameraWidth*cameraHeight*3];
 }
 
-void PS3EyeWrapper::ps3eyeInit() {
+void PS3EyeWrapper::init() {
 
 	central = [MyCameraCentral sharedCameraCentral];
 	central.cameraResolution = cameraResolution;
@@ -52,10 +52,19 @@ void PS3EyeWrapper::ps3eyeInit() {
 void PS3EyeWrapper::onImageReady (unsigned char * cameraPixels ) 
 {
 	pixels = cameraPixels;
-	NSLog(@"PS3EyeWrapper::onImageReady");
+	frameNew = true;
+	//NSLog(@"PS3EyeWrapper::onImageReady");
 }
 
 
-bool PS3EyeWrapper::ps3eyeIsFrameNew() {
-	//return [ps3eye isFrameNew];
+bool PS3EyeWrapper::isFrameNew()
+{
+	
+		if (frameNew) 
+		{
+			frameNew = false;
+			return true;
+		}
+		return false;
+
 }
