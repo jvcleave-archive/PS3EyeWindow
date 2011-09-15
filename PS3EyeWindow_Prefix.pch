@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'PS3EyeWindow' target in the 'PS3EyeWindow' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
