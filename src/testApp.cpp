@@ -14,7 +14,7 @@ void testApp::update() {
 	{
 		timer.tick();
 	}
-	
+	ofSetWindowTitle("FPS:" + ofToString(ofGetFrameRate()));
 	cameraImage.setFromPixels(wrapper.pixels, wrapper.cameraWidth, wrapper.cameraHeight, OF_IMAGE_COLOR);
 }
 
