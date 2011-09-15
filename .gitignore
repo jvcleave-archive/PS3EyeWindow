@@ -1,2 +1,5 @@
 /build/
 *.app
+vancleave.pbxuser
+*.pbxuser
+*.mode1v3

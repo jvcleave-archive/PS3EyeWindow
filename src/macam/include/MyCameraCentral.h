@@ -135,6 +135,7 @@
 
 //delegate forwarders
 - (void) cameraDetected:(unsigned long)cid;
+- (void) updateStatus:(NSString *)status fpsDisplay:(float)fpsDisplay fpsReceived:(float)fpsReceived;
 
 //Notification from running camera
 - (void) cameraHasShutDown:(id)sender;

@@ -4,6 +4,7 @@ ofImage cameraImage;
 void testApp::setup()
 {
 	//ofSetFrameRate(60);
+	//wrapper.setup(PS3_VGA, 5);
 	//wrapper.setup(PS3_VGA, 60);
 	wrapper.setup(PS3_SIF, 180);
 }
@@ -24,6 +25,6 @@ void testApp::draw() {
 	cameraImage.draw(0, 0);
 	
 	ofSetColor(255);
-	ofDrawBitmapString(ofToString((int) timer.getFrameRate()), 0, wrapper.cameraHeight+20);
+	ofDrawBitmapString(ofToString((int) timer.getFrameRate()), wrapper.cameraWidth, wrapper.cameraHeight+20);
 }
 

@@ -52,9 +52,6 @@ MyCameraCentral* sharedCameraCentral=NULL;
 - (NSString *) cameraDisabledKeyFromVendorID:(UInt16)vid andProductID:(UInt16)pid;
 - (NSString *) cameraDisabledKeyFromDriver:(MyCameraDriver *)camera;
 
-- (void) listAllCameras;
-- (void) listAllDuplicates;
-- (void) listAllMultiDriver;
 PS3EyeWrapper* myWrapper;
 
 @end
@@ -189,128 +186,6 @@ PS3EyeWrapper* myWrapper;
     [super dealloc]; // where is the constructor?
 }
 
-- (void) listAllCameras
-{
-    int             i;
-    MyCameraInfo *  info = NULL;
-    
-    printf("\n");
-    printf("List of all Cameras:\n");
-    printf("==========\n");
-    
-    for (i = 0; i < [cameraTypes count]; i++) 
-    {
-        info = [cameraTypes objectAtIndex:i];
-        
-        printf("%03lu, 0x%04X, 0x%04X, %s, %s\n", [info cid], (unsigned) [info vendorID], (unsigned) [info productID], [NSStringFromClass([info driverClass]) UTF8String], [[info cameraName] UTF8String]);
-    }
-    
-    printf("========== ==========\n");
-}
-
-- (void) listAllDuplicates
-{
-    int             i, j;
-    BOOL            first;
-    MyCameraInfo *  info = NULL;
-    
-    printf("\n");
-    printf("List of all Duplicates (VID, PID, Driver):\n");
-    
-    for (i = 0; i < [cameraTypes count]; i++) 
-    {
-        SInt32          usbVendor;
-        SInt32          usbProduct;
-        NSString *      driverName;
-        
-        first = YES;
-        info = [cameraTypes objectAtIndex:i];
-        
-        usbVendor = [info vendorID];
-        usbProduct = [info productID];
-        driverName = NSStringFromClass([info driverClass]);
-        
-        for (j = 0; j < [cameraTypes count]; j++) 
-        {
-            MyCameraInfo * other = [cameraTypes objectAtIndex:j];
-            
-            if (usbVendor != [other vendorID]) 
-                continue;
-            
-            if (usbProduct != [other productID]) 
-                continue;
-            
-            if (![driverName isEqualToString:NSStringFromClass([other driverClass])]) 
-                continue;
-            
-            if (j == i) 
-                continue;
-            
-            if (j < i) 
-                break;
-            
-            if (first) 
-            {
-                first = NO;
-                printf("==========\n");
-                printf("%03lu, 0x%04X, 0x%04X, %s, %s\n", [info cid], (unsigned) [info vendorID], (unsigned) [info productID], [NSStringFromClass([info driverClass]) UTF8String], [[info cameraName] UTF8String]);
-            }
-            printf("%03lu, 0x%04X, 0x%04X, %s, %s\n", [other cid], (unsigned) [other vendorID], (unsigned) [other productID], [NSStringFromClass([other driverClass]) UTF8String], [[other cameraName] UTF8String]);
-        }
-    }
-    
-    printf("========== ==========\n");
-}
-
-- (void) listAllMultiDriver
-{
-    int             i, j;
-    BOOL            first;
-    MyCameraInfo *  info = NULL;
-    
-    printf("\n");
-    printf("List of cameras with Multiple Drivers (VID, PID):\n");
-    
-    for (i = 0; i < [cameraTypes count]; i++) 
-    {
-        SInt32          usbVendor;
-        SInt32          usbProduct;
-        
-        first = YES;
-        info = [cameraTypes objectAtIndex:i];
-        
-        usbVendor = [info vendorID];
-        usbProduct = [info productID];
-        
-        for (j = 0; j < [cameraTypes count]; j++) 
-        {
-            MyCameraInfo * other = [cameraTypes objectAtIndex:j];
-            
-            if (usbVendor != [other vendorID]) 
-                continue;
-            
-            if (usbProduct != [other productID]) 
-                continue;
-            
-            if (j == i) 
-                continue;
-            
-            if (j < i) 
-                break;
-            
-            if (first) 
-            {
-                first = NO;
-                printf("==========\n");
-                printf("%03lu, 0x%04X, 0x%04X, %s, %s\n", [info cid], (unsigned) [info vendorID], (unsigned) [info productID], [NSStringFromClass([info driverClass]) UTF8String], [[info cameraName] UTF8String]);
-            }
-            printf("%03lu, 0x%04X, 0x%04X, %s, %s\n", [other cid], (unsigned) [other vendorID], (unsigned) [other productID], [NSStringFromClass([other driverClass]) UTF8String], [[other cameraName] UTF8String]);
-        }
-    }
-    
-    printf("========== ==========\n");
-}
-
 - (BOOL) startupWithNotificationsOnMainThread:(BOOL)nomt recognizeLaterPlugins:(BOOL)rlp
 {
 	NSLog(@"MyCameraCentral:startupWithNotificationsOnMainThread");
@@ -341,12 +216,6 @@ PS3EyeWrapper* myWrapper;
     [self registerCameraDriver:[OV538Driver class]];
     
   
-    
-#if 0
-    [self listAllCameras];
-    [self listAllDuplicates];
-    [self listAllMultiDriver];
-#endif
     
     //Get the IOKit master port (needed for communication with IOKit)
     ret = IOMasterPort(MACH_PORT_NULL, &masterPort);
@@ -845,7 +714,10 @@ void DeviceAdded(void *refCon, io_iterator_t iterator) {
         [self cameraDetected:[dev cid]];
     }
 }
-
+- (void) updateStatus:(NSString *)status fpsDisplay:(float)fpsDisplay fpsReceived:(float)fpsReceived
+{
+	NSLog(@"%@ fpsDisplay: %f fpsReceived: %f", [self class], fpsDisplay, fpsReceived);
+}
 - (void) cameraDetected:(unsigned long) cid {
 	
 	NSLog(@"%@ cameraDetected ", [self class]);
@@ -993,7 +865,8 @@ void DeviceAdded(void *refCon, io_iterator_t iterator) {
     id val=NULL;
     if (!key) return NULL;		//No key, no value
     if (!prefsDict) {			//No prefs there. Try to load prefs file.
-        NSString* pathName=[[NSString stringWithFormat:@"~/Library/Preferences/%@.plist",driverBundleName] stringByExpandingTildeInPath];
+        NSString* pathName=[[NSString stringWithFormat:@"~/Library/Preferences/%@.plist", driverBundleName] stringByExpandingTildeInPath];
+		NSLog(@"%@ :prefsForKey Preferences path %@", [self class], pathName);
         NSDictionary* dict;
         dict=[NSDictionary dictionaryWithContentsOfFile:pathName];
         if (dict) prefsDict=[dict mutableCopy];
@@ -1023,6 +896,7 @@ void DeviceAdded(void *refCon, io_iterator_t iterator) {
     }
 //Write to file
     pathName=[[NSString stringWithFormat:@"~/Library/Preferences/%@.plist",driverBundleName] stringByExpandingTildeInPath];
+	NSLog(@"Preferences path %@", pathName);
     [prefsDict writeToFile:pathName atomically:YES];
 }
 

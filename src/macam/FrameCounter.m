@@ -59,7 +59,7 @@
 {
     struct timeval currentTime, difference;
     int diffMilliSeconds;
-    
+    NSLog(@"%@ cumulativeFPS %f currentFPS %f", [self class], cumulativeFPS, currentFPS);
     if (frameCount < currentFPS) 
         return NO;
     
